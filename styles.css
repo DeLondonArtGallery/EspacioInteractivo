@@ -1,0 +1,83 @@
+/* Estilos para el header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text img {
+    max-width: 100px; /* Ajusta el tamaño de la imagen a tu gusto */
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.logo-text .text h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-text .text p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Color de hover */
+}
+
+/* Estilos para la sección de la imagen grande */
+.hero {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto; /* La imagen se ajustará al ancho de la pantalla */
+    display: block;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 15px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
