@@ -311,3 +311,6 @@ article a {
         height: auto; /* Mantiene la proporción de las imágenes */
     }
 }
+main {
+    margin-top: 150px; /* Ajusta este valor según la altura del header */
+}
