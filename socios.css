@@ -414,3 +414,6 @@ main {
 article {
     margin-bottom: 20px; /* Espaciado entre los artículos */
 }
+main {
+    margin-top: 150px;
+}
