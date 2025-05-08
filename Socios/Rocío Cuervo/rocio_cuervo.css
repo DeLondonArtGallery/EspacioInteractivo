@@ -284,7 +284,7 @@ main h2{
 .video video {
     flex: 0 0 calc(50% - 20px); /* Cada video ocupa el 50% menos el espacio del gap */
     max-width: 100%;
-    max-height: 400px;
+    max-height: 750px;
     border-radius: 8px;
     margin: auto;
 }
@@ -331,4 +331,12 @@ header a {
 
 header a:hover {
     color: #ecf0f1;
+}
+.presentación {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para apilar los elementos */
+    align-items: center; /* Centra los elementos horizontalmente */
+    text-align: center; /* Centra el texto dentro de la presentación */
+    margin: 20px 0; /* Espaciado superior e inferior */
+    font-size: 19px;
 }
