@@ -310,3 +310,29 @@ header a {
 header a:hover {
     color: #ecf0f1;
 }
+.header-btn {
+    display: inline-block;
+    background: #fff;
+    color: #222;
+    padding: 8px 18px;
+    border-radius: 12px;
+    margin: 5px 8px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #f76825; /* Celeste */
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    box-shadow: 0 2px 8px rgba(79,195,247,0.08);
+}
+
+.header-btn:hover {
+    background: #f39315;
+    color: #fff;
+    border-color: #f76825;
+}
+.hamburger {
+    color: #f76825 !important;
+}
+.hamburger:hover,
+.hamburger:focus {
+    color: #f76825 !important;
+}
