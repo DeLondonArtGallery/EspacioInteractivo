@@ -417,13 +417,44 @@ article {
 main {
     margin-top: 200px;
 }
+/* Estilo base: 3 columnas en escritorio */
 .nombresdesocios {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
-    gap: 20px; /* Espaciado entre las figuras */
-    justify-items: center; /* Centra las imágenes horizontalmente */
-    align-items: center; /* Centra las imágenes verticalmente */
-    margin: 0 auto; /* Centra el contenedor */
-    padding: 10px; /* Espaciado interno */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
     margin-left: -90px;
+}
+
+/* 2 columnas en tablets */
+@media (max-width: 900px) {
+    .nombresdesocios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 1 columna en mobile */
+@media (max-width: 600px) {
+    .nombresdesocios {
+        grid-template-columns: 1fr;
+    }
+}
+.nombresdesocios figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.nombresdesocios a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nombresdesocios a:hover h3 {
+    text-decoration: underline;
+    color: #0074d9;
 }
