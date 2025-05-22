@@ -417,3 +417,12 @@ article {
 main {
     margin-top: 200px;
 }
+.nombresdesocios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    gap: 20px; /* Espaciado entre las figuras */
+    justify-items: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 10px; /* Espaciado interno */
+}
