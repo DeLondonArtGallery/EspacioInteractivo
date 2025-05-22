@@ -426,22 +426,26 @@ main {
     align-items: center;
     margin: 0 auto;
     padding: 10px;
-    margin-left: -90px;
 }
 
-/* 2 columnas en tablets */
 @media (max-width: 900px) {
     .nombresdesocios {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* 1 columna en mobile */
 @media (max-width: 600px) {
     .nombresdesocios {
         grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 10px 0;
+    }
+    main {
+        padding: 5px;
+        margin-left: 0;
     }
 }
+
 .nombresdesocios figure {
     display: flex;
     flex-direction: column;
