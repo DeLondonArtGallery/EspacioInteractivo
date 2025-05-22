@@ -268,16 +268,19 @@ footer p {
 }
 .caja-grande {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
-    gap: 20px; /* Espaciado entre las imágenes */
-    justify-items: center; /* Centra las imágenes horizontalmente dentro de cada celda */
-    align-items: center; /* Centra las imágenes verticalmente dentro de cada celda */
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap:100px; /* Aumenta este valor para más separación */
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
 .caja-grande img {
-    max-width: 500px;
-    max-height: 500px; /* Mantiene la proporción de las imágenes */
-    border-radius: 8px; /* Opcional: bordes redondeados */
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
 }
 @media (max-width: 768px) {
     .caja-grande {
@@ -318,4 +321,35 @@ header a {
 
 header a:hover {
     color: #ecf0f1;
+}
+@media (max-width: 700px) {
+    .caja-grande {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+.saludo-final {
+    margin-top: -50px; /* Reduce este valor según lo que prefieras */
+}
+@media (max-width: 600px) {
+    .saludo-final {
+        margin-top: 0; /* Elimina el margen negativo en pantallas pequeñas */
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+}
+/* Estilos para el formulario de contacto */
+.contacto {
+    text-align: left;
+    margin-left: 0;
+    width: 100%;
+    max-width: 600px; /* o el ancho que prefieras */
+    align-self: flex-start;
+    margin-left: 150px; /* Espacio a la izquierda */
+}
+@media (max-width: 600px) {
+    .contacto {
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    }
 }
