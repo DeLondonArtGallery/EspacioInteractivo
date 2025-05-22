@@ -425,4 +425,5 @@ main {
     align-items: center; /* Centra las imágenes verticalmente */
     margin: 0 auto; /* Centra el contenedor */
     padding: 10px; /* Espaciado interno */
+    margin-left: -90px;
 }
