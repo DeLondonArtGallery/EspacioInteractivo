@@ -368,7 +368,7 @@ section h2 {
 }
 @media screen and (max-width: 768px) {
     main {
-        margin-top: 200px;
+        margin-top: 250px;
     }
     section article p {
         font-size: 14px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
