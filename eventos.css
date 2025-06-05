@@ -291,7 +291,7 @@ footer p {
     }
 }
 main {
-    margin-top: 200px; /* Espacio para el header fijo */
+    margin-top: 100px; /* Espacio para el header fijo */
     padding: 20px;
     background-color: #ecf0f1;
     min-height: calc(100vh - 200px); /* Asegura que el main ocupe al menos la altura de la pantalla menos el header y footer */
@@ -344,4 +344,42 @@ header a:hover {
 .hamburger:hover,
 .hamburger:focus {
     color: #f76825 !important;
+}
+section h2 {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #f76825;
+    -webkit-text-stroke: 0.9px #000; /* Contorno negro */
+    /* text-stroke removed: not supported in CSS standards */
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        margin-top: 100px;
+    }
+    section article p {
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        color: #000;
+    }
+}
+@media screen and (max-width: 768px) {
+    main {
+        margin-top: 200px;
+    }
+    section article p {
+        font-size: 14px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+        text-align: center;
+        color: #000;
+
+    }
+}
+
+.coso {
+    margin-top: -45px;
+    margin-bottom: 45px;
+    color: #000000;
 }
