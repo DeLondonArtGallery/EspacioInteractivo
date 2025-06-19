@@ -488,3 +488,7 @@ main {
 .hamburger:focus {
     color: #f76825 !important;
 }
+header {
+    background-color: #f1ddca; /* Color de fondo del header */
+    color: #222; /* Color del texto del header */
+}
