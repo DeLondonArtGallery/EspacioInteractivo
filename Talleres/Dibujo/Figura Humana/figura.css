@@ -413,3 +413,7 @@ section h2 {
     margin: 0 auto; /* Centra la imagen dentro de su celda */
     height: auto; /* Mantiene la proporción de la imagen */
 }
+header {
+    background-color: #f1ddca; /* Color de fondo del header */
+    color: #222; /* Color del texto del header */
+}
