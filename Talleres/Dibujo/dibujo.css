@@ -383,3 +383,7 @@ section h2 {
     margin-bottom: 45px;
     color: #000000;
 }
+header {
+    background-color: #f1ddca; /* Color de fondo del header */
+    color: #222; /* Color del texto del header */
+}
