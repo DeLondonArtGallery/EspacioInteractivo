@@ -362,6 +362,9 @@ header a:hover {
 .titulazo {
     margin: 20px 0;
     padding: 20px;
+    font-size: 45px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000; /* Color del texto del titulazo */
 }
 main {
     padding: 20px;
