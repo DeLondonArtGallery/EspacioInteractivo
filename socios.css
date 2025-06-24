@@ -426,6 +426,7 @@ main {
     align-items: center;
     margin: 0 auto;
     padding: 10px;
+    margin-bottom: 60px;
 }
 
 @media (max-width: 900px) {
