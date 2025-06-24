@@ -345,6 +345,7 @@ header a:hover {
     max-width: 600px; /* o el ancho que prefieras */
     align-self: flex-start;
     margin-left: 150px; /* Espacio a la izquierda */
+    margin-bottom: 60px;
 }
 @media (max-width: 600px) {
     .contacto {
