@@ -268,10 +268,10 @@ footer p {
 }
 .caja-grande {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
-    gap: 20px; /* Espaciado entre las imágenes */
-    justify-items: center; /* Centra las imágenes horizontalmente dentro de cada celda */
-    align-items: center; /* Centra las imágenes verticalmente dentro de cada celda */
+    grid-template-columns: repeat(3, 2fr); /* 3 columnas de igual tamaño */
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
 }
 
 .caja-grande img {
