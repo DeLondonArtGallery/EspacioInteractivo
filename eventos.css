@@ -290,15 +290,6 @@ footer p {
         height: auto; /* Mantiene la proporción de las imágenes */
     }
 }
-main {
-    margin-top: 100px; /* Espacio para el header fijo */
-    padding: 20px;
-    background-color: #ecf0f1;
-    min-height: calc(100vh - 200px); /* Asegura que el main ocupe al menos la altura de la pantalla menos el header y footer */
-    display: flex;
-    flex-direction: column; /* Alinea los elementos en columna */
-    align-items: center; /* Centra los elementos horizontalmente */
-}
 header {
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
@@ -395,11 +386,20 @@ header {
     color: #000000; /* Color del texto del titulazo */
 }
 main {
+    margin-top: 140px; /* O el valor que uses en socios */
     padding: 20px;
-    margin-top: 100px;
+    background-color: #ecf0f1;
+    min-height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 section {
-    margin: 0;
+    margin: 0 0 40px 0;  /* Espacio solo abajo entre secciones */
+    padding: 0;
+}
+.titulazo {
+    margin: 0 0 30px 0;  /* Sin margen arriba, solo abajo */
     padding: 0;
 }
 @media screen and (max-width: 640px) {
