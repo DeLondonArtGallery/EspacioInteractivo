@@ -280,12 +280,17 @@ header a:hover {
 .hamburger:focus {
     color: #f76825 !important;
 }
+header {
+    background-color: #f1ddca; /* Color de fondo del header */
+    color: #222; /* Color del texto del header */
+}
 .titulazo {
     margin: 20px 0;
     padding: 20px;
     font-size: 45px;
     font-family: 'Times New Roman', Times, serif;
     color: #000000; /* Color del texto del titulazo */
+    -webkit-text-stroke: 0.9px #000; /* Contorno negro */
 }
 main {
     padding: 20px;
@@ -299,4 +304,17 @@ section {
     main {
         margin-top: 200px;
     }
+}
+.caja-grande {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
+    gap: 20px; /* Espaciado entre las imágenes */
+    justify-items: center; /* Centra las imágenes horizontalmente dentro de cada celda */
+    align-items: center; /* Centra las imágenes verticalmente dentro de cada celda */
+}
+
+.caja-grande img {
+    max-width: 400px;
+    max-height: 400px; /* Mantiene la proporción de las imágenes */
+    border-radius: 8px; /* Opcional: bordes redondeados */
 }
