@@ -735,7 +735,12 @@ main {
 
     }
 }
-
+@media (min-width: 0) and (max-width: 576px) {
+    main {
+        margin-top: 305px; /* Ajusta este valor según el alto de tu header */
+    }
+    
+}
 @media (min-width: 663px) and (max-width: 1029px) {
     main {
         margin-top: 140px; /* Ajusta este valor según el alto de tu header */
