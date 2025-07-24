@@ -400,7 +400,7 @@ main {
 
 @media screen and (min-width: 768px) {
     main {
-        margin-top: 100px;
+        margin-top: 150px;
     }
     section article p {
         font-size: 20px;
@@ -435,6 +435,6 @@ main {
 
 @media (min-width: 663px) and (max-width: 1029px) {
     main {
-        margin-top: 140px; /* Ajusta este valor según el alto de tu header */
+        margin-top: 200px; /* Ajusta este valor según el alto de tu header */
     }
 }
