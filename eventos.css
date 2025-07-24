@@ -347,9 +347,6 @@ section h2 {
 }
 
 @media screen and (min-width: 768px) {
-    main {
-        margin-top: 100px;
-    }
     section article p {
         font-size: 20px;
         text-align: center;
@@ -358,9 +355,6 @@ section h2 {
     }
 }
 @media screen and (max-width: 768px) {
-    main {
-        margin-top: 250px;
-    }
     section article p {
         font-size: 14px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
         text-align: center;
@@ -385,15 +379,7 @@ header {
     font-family: 'Times New Roman', Times, serif;
     color: #000000; /* Color del texto del titulazo */
 }
-main {
-    margin-top: 140px; /* O el valor que uses en socios */
-    padding: 20px;
-    background-color: #ecf0f1;
-    min-height: calc(100vh - 200px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 section {
     margin: 0 0 40px 0;  /* Espacio solo abajo entre secciones */
     padding: 0;
@@ -402,8 +388,53 @@ section {
     margin: 0 0 30px 0;  /* Sin margen arriba, solo abajo */
     padding: 0;
 }
-@media screen and (max-width: 640px) {
+main {
+    margin-top: 150px; /* Ajusta según el alto real de tu header */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    background: transparent;
+}
+
+@media screen and (min-width: 768px) {
     main {
-        margin-top: 200px;
+        margin-top: 100px;
+    }
+    section article p {
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        color: #000;
+    }
+}
+@media screen and (max-width: 768px) {
+    main {
+        padding: 5px; /* Reduce el espacio interno */
+        text-align: center; /* Centra el texto */
+        margin-left: 5px;
+        display: flex;
+        flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente fila */
+        gap: 20px; /* Espaciado entre los videos */
+        justify-content: center; /* Centra los videos horizontalmente */
+    }
+    section article p {
+        font-size: 14px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+        text-align: center;
+        color: #000;
+
+    }
+}
+@media (min-width: 0) and (max-width: 576px) {
+    main {
+        margin-top: 305px; /* Ajusta este valor según el alto de tu header */
+    }
+    
+}
+
+@media (min-width: 663px) and (max-width: 1029px) {
+    main {
+        margin-top: 140px; /* Ajusta este valor según el alto de tu header */
     }
 }
