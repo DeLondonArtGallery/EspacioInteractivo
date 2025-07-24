@@ -311,9 +311,9 @@ article a {
         height: auto; /* Mantiene la proporción de las imágenes */
     }
 }
-main {
-    margin-top: 150px; /* Ajusta este valor según la altura del header */
-}header {
+
+
+header {
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
     justify-content: space-between; /* Distribuye los elementos horizontalmente */
@@ -333,16 +333,6 @@ header a {
 header a:hover {
     color: #ecf0f1;
 }
-@media (max-width: 768px) {
-    main {
-        padding: 5px; /* Reduce el espacio interno */
-        text-align: center; /* Centra el texto */
-        margin-left: 5px;
-        display: flex;
-        flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente fila */
-        gap: 20px; /* Espaciado entre los videos */
-        justify-content: center; /* Centra los videos horizontalmente */
-    }
 
     .nombresdesocios {
         display: grid;
@@ -707,6 +697,15 @@ section h2 {
     -webkit-text-stroke: 0.9px #000; /* Contorno negro */
     /* text-stroke removed: not supported in CSS standards */
 }
+main {
+    margin-top: 150px; /* Ajusta según el alto real de tu header */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    background: transparent;
+}
 
 @media screen and (min-width: 768px) {
     main {
@@ -721,13 +720,25 @@ section h2 {
 }
 @media screen and (max-width: 768px) {
     main {
-        margin-top: 250px;
+        padding: 5px; /* Reduce el espacio interno */
+        text-align: center; /* Centra el texto */
+        margin-left: 5px;
+        display: flex;
+        flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente fila */
+        gap: 20px; /* Espaciado entre los videos */
+        justify-content: center; /* Centra los videos horizontalmente */
     }
     section article p {
         font-size: 14px; /* Ajusta el tamaño de fuente para pantallas pequeñas */
         text-align: center;
         color: #000;
 
+    }
+}
+
+@media (min-width: 663px) and (max-width: 1029px) {
+    main {
+        margin-top: 140px; /* Ajusta este valor según el alto de tu header */
     }
 }
 
@@ -747,15 +758,7 @@ header {
     font-family: 'Times New Roman', Times, serif;
     color: #000000; /* Color del texto del titulazo */
 }
-main {
-    margin-top: 140px; /* O el valor que uses en socios */
-    padding: 20px;
-    background-color: #ecf0f1;
-    min-height: calc(100vh - 200px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 section {
     margin: 0 0 40px 0;  /* Espacio solo abajo entre secciones */
     padding: 0;
@@ -764,12 +767,6 @@ section {
     margin: 0 0 30px 0;  /* Sin margen arriba, solo abajo */
     padding: 0;
 }
-@media screen and (max-width: 640px) {
-    main {
-        margin-top: 200px;
-    }
-}
-
 
     .nombresdesocios img {
         max-width: 100%; /* Asegura que las imágenes ocupen todo el ancho disponible */
@@ -779,13 +776,7 @@ section {
         gap: 20px; /* Espaciado entre los videos */
         justify-content: center; /* Centra los videos horizontalmente */
     }
-}
-main {
-    max-width: 1200px; /* Limita el ancho máximo del contenido */
-    margin: 0 auto; /* Centra el contenido horizontalmente */
-    padding: 10px; /* Agrega espacio interno */
-    text-align: center; /* Centra el texto dentro del main */
-}
+
 .nombresdesocios {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta el número de columnas automáticamente */
@@ -806,11 +797,7 @@ main {
     border-radius: 8px;
 }
 @media (max-width: 768px) {
-    main {
-        padding: 10px; /* Reduce el espacio interno */
-        text-align: center; /* Centra el texto */
-    }
-
+    
     .nombresdesocios {
         grid-template-columns: 1fr; /* Cambia a una sola columna */
         gap: 15px; /* Espaciado entre los elementos */
@@ -829,9 +816,7 @@ main {
 article {
     margin-bottom: 20px; /* Espaciado entre los artículos */
 }
-main {
-    margin-top: 150px;
-}
+
 /* Estilo base: 3 columnas en escritorio */
 .nombresdesocios {
     display: grid;
@@ -912,16 +897,8 @@ header {
     color: #000000; /* Color del texto del titulazo */
     -webkit-text-stroke: 0.9px #000; /* Contorno negro */
 }
-main {
-    padding: 20px;
-    margin-top: 100px;
-}
+
 section {
     margin: 0;
     padding: 0;
-}
-@media screen and (max-width: 640px) {
-    main {
-        margin-top: 200px;
-    }
 }
