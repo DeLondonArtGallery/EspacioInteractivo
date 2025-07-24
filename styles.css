@@ -101,7 +101,7 @@ section {
     margin: 20px 0;
 }
 .cabezal {
-    margin-top: 50px;
+    margin-top: 100px;
     margin-left: 0;
     width: 1300px; /* Ajusta el ancho máximo de las imágenes */
     max-height: 100%; /* Ajusta la altura máxima de las imágenes */
@@ -109,6 +109,26 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     display: flex;
     justify-content: center;
+}
+@media (max-width: 900px) {
+    .cabezal {
+        margin-top: 80px;  /* Menor espacio en tablets */
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 600px) {
+    .cabezal {
+        margin-top: 60px;  /* Menor espacio en celulares */
+        width: 100%;
+        max-width: 100%;
+        padding: 0 5px;
+        box-sizing: border-box;
+        flex-direction: column;
+    }
 }
 
 #inicio {
