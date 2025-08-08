@@ -163,15 +163,14 @@ a:hover {
 
 /* Estilos para el footer */
 footer {
-    background-color: #2c3e50;
-    color: #fff;
+    background-color: #f1ddca; /* Igual que el header */
+    color: #222;
     text-align: center;
     padding: 10px;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
-
 footer p {
     font-size: 14px;
 }
@@ -318,8 +317,8 @@ header {
     justify-content: space-between; /* Distribuye los elementos horizontalmente */
     align-items: center; /* Centra los elementos verticalmente */
     padding: 10px 20px;
-    background-color: #f1ddca; /* Color de fondo del header */
-    color: #222; /* Color del texto del header */
+    background-color: #2c3e50;
+    color: #fff;
 }
 
 header a {
@@ -340,7 +339,6 @@ header a:hover {
     margin: 20px 0; /* Espaciado superior e inferior */
     font-size: 19px;
 }
-
 .header-btn {
     display: inline-block;
     background: #fff;
@@ -366,6 +364,10 @@ header a:hover {
 .hamburger:hover,
 .hamburger:focus {
     color: #f76825 !important;
+}
+header {
+    background-color: #f1ddca; /* Color de fondo del header */
+    color: #222; /* Color del texto del header */
 }
 .titulazo {
     margin: 20px 0;
