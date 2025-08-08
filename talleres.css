@@ -279,6 +279,10 @@ footer p {
     max-height: 500px; /* Mantiene la proporción de las imágenes */
     border-radius: 8px; /* Opcional: bordes redondeados */
 }
+.caja-grande {
+    width: 100%; /* O un ancho específico, como 80% o 1200px */
+    margin: 0 auto; /* Centra el contenedor si tiene un ancho fijo */
+}
 @media (max-width: 768px) {
     .caja-grande {
         grid-template-columns: 1fr; /* Cambia a una sola columna */
@@ -353,14 +357,44 @@ header a:hover {
 section h2 {
     font-size: 45px;
     text-align: center;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     font-family: 'Times New Roman', Times, serif;
-    color: #f76825;
+    color: #000000;
     -webkit-text-stroke: 0.9px #000; /* Contorno negro */
 }
 header {
     background-color: #f1ddca; /* Color de fondo del header */
     color: #222; /* Color del texto del header */
+    padding-bottom: 10;
+}
+
+section h3 {
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    /* text-decoration:wavy; */
+    color: #000000;
+}
+section h3:hover {
+    text-decoration: underline;
+    color: #0074d9;
+}
+
+.nombresdesocios figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.nombresdesocios a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nombresdesocios a:hover h3 {
+    text-decoration: underline;
+    color: #0074d9;
 }
 .titulazo {
     margin: 20px 0;
