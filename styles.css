@@ -14,74 +14,36 @@ body {
     background-image: none;
 }
 
-/* Estilos para el header */
-header {
-    position: fixed; /* para que se vea siempre mientras escroleamos */
-    z-index: 1000;
-    width: 100%;
-    top: 0;
-    background-color: #48502c;
-    color: #fff;
-    padding: 20px;
-    padding-right: 0;
-    display: flex;
-    justify-content: space-between; /* Alinea logo a la izquierda y nav a la derecha */
-    align-items: center; /* Centra verticalmente los elementos */
-}
 
-header img {
-    max-width: 150px;
-}
-
-header nav {
-    display: flex;
-}
 nav {
     padding: 10px;
     position: relative;
     z-index: 10; /* Hace que el menú se muestre por encima */
 }
 
-/* botón de hamburguesa */
-.hamburger {
-    font-size: 24px;
-    cursor: pointer;
-    border: none;
-    background: none;
-    color: #3498db;
-    display: block;
-    z-index: 15;
-    position: relative;
-}
-
-/* Menú */
-.menu {
-    list-style: none;
-    padding: 500;
-    margin: auto;
-    display: none; /* Ocultar el menú inicialmente */
-    position: fixed; /* posicionarlo encima del contenido */
-    top: 0;
-    left: 0;
+/* Estilos para el header */
+header {
+    position: fixed;
+    z-index: 1000;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    flex-direction: column; /* Mostrar en columna */
-    justify-content: center;
+    top: 0;
+    background-color: #f1ddca;
+    color: #222;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
 }
 
-.menu.active {
-    display: flex; /*Mostrar menú cuando sea activo */
+/* Logo */
+header img {
+    max-width: 150px;
 }
 
-.menu li {
-    padding: 10px 15px;
-}
-
-.menu li a {
-    text-decoration: none;
-    color: #fff;
+/* Navegación */
+header nav {
+    display: flex;
 }
 
 header nav a {
@@ -94,6 +56,91 @@ header nav a {
 header nav a:hover {
     color: #ecf0f1;
 }
+
+/* Botón hamburguesa */
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #f76825 !important;
+    display: block;
+    z-index: 15;
+    position: relative;
+}
+
+.hamburger:hover,
+.hamburger:focus {
+    color: #f76825 !important;
+}
+
+/* Botón destacado */
+.header-btn {
+    display: inline-block;
+    background: #fff;
+    color: #222;
+    padding: 8px 18px;
+    border-radius: 12px;
+    margin: 5px 8px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #f76825;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    box-shadow: 0 2px 8px rgba(79,195,247,0.08);
+}
+
+.header-btn:hover {
+    background: #f39315;
+    color: #fff;
+    border-color: #f76825;
+}
+
+/* Menú hamburguesa */
+.menu {
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu.active {
+    display: flex;
+}
+
+.menu li {
+    padding: 10px 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Responsive para header */
+@media (max-width: 768px) {
+    header img {
+        max-width: 120px;
+    }
+    header nav {
+        display: block;
+        margin-top: 10px;
+    }
+    header nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+
 
 /* Estilos para las secciones */
 section {
@@ -225,8 +272,8 @@ a:hover {
 
 /* Estilos para el footer */
 footer {
-    background-color: #2c3e50;
-    color: #fff;
+    background-color: #f1ddca; /* Igual que el header */
+    color: #222;
     text-align: center;
     padding: 10px;
     position: fixed;
@@ -249,19 +296,6 @@ footer p {
 
 /* Media query para hacer la página responsive */
 @media (max-width: 768px) {
-    header img {
-        max-width: 120px;
-    }
-
-    header nav {
-        display: block;
-        margin-top: 10px;
-    }
-
-    header nav a {
-        display: block;
-        margin: 5px 0;
-    }
 
     figure {
         width: 100%;
@@ -352,57 +386,9 @@ footer p {
         height: auto; /* Mantiene la proporción de las imágenes */
     }
 }
-header {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
-    justify-content: space-between; /* Distribuye los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    padding: 10px 20px;
-    background-color: #f1ddca;
-    color: #fff;
-}
 
-header a {
-    color: #fff;
-    text-decoration: none;
-    margin: 5px 10px; /* Espaciado entre los enlaces */
-    font-weight: bold;
-}
 
-header a:hover {
-    color: #ecf0f1;
-}
 
-.header-btn {
-    display: inline-block;
-    background: #fff;
-    color: #222;
-    padding: 8px 18px;
-    border-radius: 12px;
-    margin: 5px 8px;
-    font-weight: bold;
-    text-decoration: none;
-    border: 2px solid #f76825; /* Celeste */
-    transition: background 0.2s, color 0.2s, border 0.2s;
-    box-shadow: 0 2px 8px rgba(79,195,247,0.08);
-}
-
-.header-btn:hover {
-    background: #f39315;
-    color: #fff;
-    border-color: #f76825;
-}
-.hamburger {
-    color: #f76825 !important;
-}
-.hamburger:hover,
-.hamburger:focus {
-    color: #f76825 !important;
-}
-header {
-    background-color: #f1ddca; /* Color de fondo del header */
-    color: #222; /* Color del texto del header */
-}
 .titulazo {
     margin: 20px 0;
     padding: 20px;
