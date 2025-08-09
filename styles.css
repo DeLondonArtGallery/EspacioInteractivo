@@ -12,6 +12,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     background-image: none;
+    background: linear-gradient(120deg, #f4f4f4 60%, #f1ddca 100%);
 }
 
 
@@ -34,6 +35,9 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    background: linear-gradient(90deg, #f1ddca 60%, #f76825 100%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+
 }
 
 /* Logo */
@@ -63,36 +67,36 @@ header nav a:hover {
     cursor: pointer;
     border: none;
     background: none;
-    color: #f76825 !important;
-    display: block;
+    color: #1a237e !important; /* Azul oscuro */
     z-index: 15;
     position: relative;
 }
 
 .hamburger:hover,
 .hamburger:focus {
-    color: #f76825 !important;
+    color: #1a237e !important; /* Azul oscuro */
 }
 
 /* Botón destacado */
 .header-btn {
     display: inline-block;
-    background: #fff;
-    color: #222;
-    padding: 8px 18px;
-    border-radius: 12px;
+    background: #f76825;
+    color: #fff;
+    padding:10px 22px;
+    border-radius: 20px;
     margin: 5px 8px;
     font-weight: bold;
     text-decoration: none;
-    border: 2px solid #f76825;
-    transition: background 0.2s, color 0.2s, border 0.2s;
-    box-shadow: 0 2px 8px rgba(79,195,247,0.08);
+    border: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(247,104,37,0.08);
 }
 
 .header-btn:hover {
     background: #f39315;
     color: #fff;
     border-color: #f76825;
+    transform: translateY(-2px) scale(1.05);
 }
 
 /* Menú hamburguesa */
@@ -264,21 +268,25 @@ a {
     color: #3498db;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.2s;
 }
 
 a:hover {
-    color: #2980b9;
+    color: #f76825;
 }
 
 /* Estilos para el footer */
 footer {
     background-color: #f1ddca; /* Igual que el header */
+    background: linear-gradient(90deg, #f1ddca 60%, #f76825 100%);
     color: #222;
     text-align: center;
-    padding: 10px;
+    padding: 18px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+    font-size: 15px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.07);
 }
 
 footer p {
@@ -389,12 +397,16 @@ footer p {
 
 
 
-.titulazo {
+.titulazo, h2 {
     margin: 20px 0;
     padding: 20px;
-    font-size: 45px;
-    font-family: 'Times New Roman', Times, serif;
-    color: #000000; /* Color del texto del titulazo */
+    font-size: 2.2em;
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #f76825; /* Color del texto del titulazo */
+    text-align: center;
+    margin-bottom: 30px;
 }
 main {
     padding: 20px;
@@ -413,4 +425,22 @@ section {
 
 #contacto {
     margin-bottom: 60px;
+}
+
+section, #galeria, #exposiciones, #contacto {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    margin: 30px 0;
+    padding: 30px 20px;
+}
+
+figure img, .caja-grande img, .caja img {
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+figure img:hover, .caja-grande img:hover, .caja img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
 }
