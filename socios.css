@@ -111,21 +111,21 @@ header nav a:hover {
 /* Botón destacado */
 .header-btn {
     display: inline-block;
-    background: #fff;
-    color: #222;
-    padding: 8px 18px;
-    border-radius: 12px;
-    margin: 5px 8px;
+    background: #f76825;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 22px;
     font-weight: bold;
+    border: none;
+    box-shadow: 0 2px 8px rgba(247,104,37,0.08);
+    margin: 5px 8px;
     text-decoration: none;
-    border: 2px solid #f76825;
-    transition: background 0.2s, color 0.2s, border 0.2s;
-    box-shadow: 0 2px 8px rgba(79,195,247,0.08);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
 }
 .header-btn:hover {
     background: #f39315;
     color: #fff;
-    border-color: #f76825;
+    transform: translateY(-2px) scale(1.05);
 }
 
 /* Footer */
@@ -282,3 +282,4 @@ section {
         margin-top: 140px;
     }
 }
+
