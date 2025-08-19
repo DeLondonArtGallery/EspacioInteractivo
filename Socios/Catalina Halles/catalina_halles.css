@@ -408,3 +408,205 @@ section {
         padding: 2px;
     }
 }
+/* ================== VISTA CELULAR ================== */
+@media screen and (max-width: 480px) {
+    /* Header */
+    header {
+        padding: 8px 12px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header img {
+        max-width: 100px;
+    }
+    .header-btn {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    /* Menú hamburguesa */
+    .menu li {
+        padding: 15px 0;
+    }
+    .menu li a {
+        font-size: 20px;
+    }
+
+    /* Texto de bienvenida */
+    #inicio {
+        font-size: 18px;
+        margin-top: 120px;
+    }
+    span {
+        font-size: 14px;
+    }
+    .bienvenida {
+        font-size: 16px;
+        margin: 30px 10px;
+    }
+
+    /* Secciones */
+    section, #galeria, #exposiciones, #contacto {
+        margin: 20px 0;
+        padding: 20px 15px;
+    }
+
+    /* Galería y figuras */
+    figure img {
+        width: 100%;
+        height: auto;
+    }
+
+    .caja, .caja-grande {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .caja img, .caja-grande img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Videos */
+    .video {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .video video {
+        flex: 1 1 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Títulos */
+    .titulazo, h2 {
+        font-size: 1.6em;
+        padding: 10px;
+        margin: 15px 0;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 12px;
+        padding: 12px 5px;
+        position: relative;
+    }
+}
+/* ================== OPCIÓN 2: Header con botones reducidos al lado del logo ================== */
+/* Botones al lado del logo, pero permiten varias filas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start; /* permite que el logo quede arriba si el nav ocupa más */
+        flex-wrap: wrap;
+        padding: 10px 12px;
+    }
+
+    header img {
+        max-width: 110px;
+        margin-bottom: 6px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap; /* permite que los botones bajen a segunda fila */
+        justify-content: flex-end;
+        gap: 6px;
+        flex: 1; /* ocupa todo el ancho que pueda */
+    }
+
+    .header-btn {
+        font-size: 13px;
+        padding: 6px 12px;
+        margin: 4px 2px;
+        flex-shrink: 0; /* que no se achiquen más de la cuenta */
+    }
+}
+
+/* Extra ajuste para pantallas muy chicas (celulares <480px) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column; /* logo arriba, botones debajo */
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .header-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+/* ================== OPCIÓN 2: Header con botones reducidos al lado del logo ================== */
+/* Botones al lado del logo, pero permiten varias filas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start; /* permite que el logo quede arriba si el nav ocupa más */
+        flex-wrap: wrap;
+        padding: 10px 12px;
+    }
+
+    header img {
+        max-width: 110px;
+        margin-bottom: 6px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap; /* permite que los botones bajen a segunda fila */
+        justify-content: flex-end;
+        gap: 6px;
+        flex: 1; /* ocupa todo el ancho que pueda */
+    }
+
+    .header-btn {
+        font-size: 13px;
+        padding: 6px 12px;
+        margin: 4px 2px;
+        flex-shrink: 0; /* que no se achiquen más de la cuenta */
+    }
+}
+
+/* Extra ajuste para pantallas muy chicas (celulares <480px) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column; /* logo arriba, botones debajo */
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .header-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+/* ===== Botón hamburguesa fijo a la derecha en mobile ===== */
+@media (max-width: 768px) {
+    .hamburger {
+        position: absolute;   /* se "desacopla" del flujo */
+        right: 15px;          /* pegado al borde derecho */
+        top: 50%;             /* centrado verticalmente */
+        transform: translateY(-50%); /* lo baja para que quede alineado */
+        font-size: 26px;      /* un poquito más grande en mobile */
+        z-index: 2000;        /* por encima de todo */
+    }
+
+    header {
+        position: relative; /* el absolute del botón toma como referencia el header */
+    }
+}
+
+/* Para pantallas muy chicas */
+@media (max-width: 480px) {
+    .hamburger {
+        right: 10px;   /* más cerca del borde */
+        font-size: 24px;
+    }
+}
