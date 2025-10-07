@@ -398,6 +398,35 @@ footer p {
     max-width: 100%;
 }
 
+.autor-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 0;
+    gap: 18px;
+}
+
+.autor-wrap img {
+    display: block;
+    margin: 0 auto;
+    max-width: 180px;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.autor-wrap h3 {
+    text-align: center;
+    width: 100%;
+}
+
+.author-wrap p {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.5;
+}
+
 .caja-grande {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
