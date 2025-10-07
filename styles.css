@@ -217,13 +217,13 @@ span {
     color: #000;
 }
 
-#galeria, #exposiciones, #contacto {
+#galeria, #exposiciones, #contacto, #blog {
     background-color: #fff;
     /* border: 1px solid #ddd; */
     border-radius: 8px;
 }
 
-#galeria h2, #exposiciones h2, #contacto h2 {
+#galeria h2, #exposiciones h2, #contacto h2, #blog h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -432,7 +432,19 @@ section {
     margin-bottom: 60px;
 }
 
-section, #galeria, #exposiciones, #contacto {
+#blog {
+    margin-bottom: 60px;
+}
+
+#blog p {
+    font-size: 16px;
+}
+
+#blog a {
+    font-weight: bold;
+}
+
+section, #galeria, #exposiciones, #contacto, #blog {
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
@@ -487,7 +499,7 @@ figure img:hover, .caja-grande img:hover, .caja img:hover {
     }
 
     /* Secciones */
-    section, #galeria, #exposiciones, #contacto {
+    section, #galeria, #exposiciones, #contacto, #blog {
         margin: 20px 0;
         padding: 20px 15px;
     }
