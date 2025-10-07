@@ -1,46 +1,53 @@
-/* Reseteo básico */
+/* Reseteo básico de márgenes y rellenos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body */
+/* Estilos generales del body */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    background-image: none;
+    background: linear-gradient(120deg, #f4f4f4 60%, #f1ddca 100%);
 }
 
-/* Header moderno y limpio */
+
+nav {
+    padding: 10px;
+    position: relative;
+    z-index: 10; /* Hace que el menú se muestre por encima */
+}
+
+/* Estilos para el header */
 header {
     position: fixed;
     z-index: 1000;
     width: 100%;
     top: 0;
-    background: linear-gradient(90deg, #f1ddca 60%, #f76825 100%);
+    background-color: #f1ddca;
     color: #222;
-    padding: 20px;
+    padding: 10px 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    background: linear-gradient(90deg, #f1ddca 60%, #f76825 100%);
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    transition: background 0.3s, box-shadow 0.3s;
+
 }
 
+/* Logo */
 header img {
     max-width: 150px;
 }
 
+/* Navegación */
 header nav {
     display: flex;
-}
-
-nav {
-    padding: 10px;
-    position: relative;
-    z-index: 10;
 }
 
 header nav a {
@@ -48,7 +55,6 @@ header nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
-    transition: color 0.2s;
 }
 
 header nav a:hover {
@@ -61,13 +67,41 @@ header nav a:hover {
     cursor: pointer;
     border: none;
     background: none;
-    color: #1a237e !important;
+    color: #1a237e !important; /* Azul oscuro normalmente */
     transition: color 0.2s;
     z-index: 15;
     position: relative;
 }
+
+.hamburger:hover,
+.hamburger:focus {
+    color: #1a237e !important; /* Azul oscuro */
+}
+
 .hamburger.active {
-    color: #f76825 !important;
+    color: #f76825 !important; /* Naranja cuando es cruz */
+}
+
+/* Botón destacado */
+.header-btn {
+    display: inline-block;
+    background: #f76825;
+    color: #fff;
+    padding:10px 22px;
+    border-radius: 20px;
+    margin: 5px 8px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(247,104,37,0.08);
+}
+
+.header-btn:hover {
+    background: #f39315;
+    color: #fff;
+    border-color: #f76825;
+    transform: translateY(-2px) scale(1.05);
 }
 
 /* Menú hamburguesa */
@@ -86,322 +120,22 @@ header nav a:hover {
     justify-content: center;
     align-items: center;
 }
+
 .menu.active {
     display: flex;
 }
+
 .menu li {
     padding: 10px 15px;
 }
+
 .menu li a {
     text-decoration: none;
     color: #fff;
-    transition: color 0.2s;
-}
-.menu li a:hover {
-    color: #f76825;
 }
 
-/* Botón destacado */
-.header-btn {
-    display: inline-block;
-    background: #f76825;
-    color: #fff;
-    border-radius: 20px;
-    padding: 10px 22px;
-    font-weight: bold;
-    border: none;
-    box-shadow: 0 2px 8px rgba(247,104,37,0.08);
-    margin: 5px 8px;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s, transform 0.2s;
-}
-.header-btn:hover {
-    background: #f39315;
-    color: #fff;
-    transform: translateY(-2px) scale(1.05);
-}
-
-/* Secciones */
-section {
-    padding: 20px;
-    margin: 20px 0;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-}
-
-/* Títulos */
-.titulazo, h2 {
-    font-size: 45px;
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    color: #000;
-    -webkit-text-stroke: 0.9px #000;
-    font-weight: bold;
-}
-
-.page-description {
-    font-size: 1.15em;
-    color: #444;
-    text-align: center;
-    margin: 18px 0 28px 0;
-    font-family: Arial, sans-serif;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 0.5px;
-}
-
-/* Galería imágenes */
-figure {
-    display: inline-block;
-    margin: 10px;
-    text-align: center;
-}
-
-figure img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-figure img:hover {
-    transform: scale(1.07);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.20);
-}
-
-/* Caja y caja-grande */
-.caja {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-    justify-items: center;
-    align-items: center;
-    justify-content: center;
-
-    width: fit-content;  /* ajusta el ancho al contenido */
-    max-width: 100%;     /* para no exceder el contenedor padre */
-    margin: 0 auto;      /* centra horizontalmente */
-}
-
-.caja p {
-    text-align: center;
-    font-size: 1.1em;
-    color: #000000;
-    margin-top: 10px;
-}
-
-.caja img {
-    max-width: 400px;
-    max-height: 400px;
-    border-radius: 8px;
-    display: block;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-    align-items: center;
-}
-.caja img:hover {
-    transform: scale(1.07);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.20);
-}
-
-.caja-grande {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    justify-items: center;
-    align-items: center;
-}
-.caja-grande img {
-    max-width: 500px;
-    max-height: 500px;
-    border-radius: 8px;
-    display: block;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-}
-.caja-grande img:hover {
-    transform: scale(1.07);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.20);
-}
-.caja-grande .articulo {
-    padding: 40px 50px;  /* mucho espacio interno */
-    padding-top: 50px;
-    padding-bottom: 50px;
-    box-sizing: border-box; /* importante para que padding no haga overflow */
-    max-width: 90vw;
-    margin: 40px auto;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.articulo {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.caja-grande .articulo img {
-    margin: 0 20px; /* margen horizontal */
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-}
-
-.caja-grande .articulo figure {
-    margin: 20px 0;
-}
-
+/* Responsive para header */
 @media (max-width: 768px) {
-    .caja-grande .articulo {
-        max-width: 100%;
-        padding: 10px;
-        font-size: 16px;
-    }
-}
-
-/* Video estilos */
-.video {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-items: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-}
-.video video,
-.video iframe {
-    max-width: 100%;
-    max-height: 400px;
-    border-radius: 8px;
-    display: block;
-    margin: auto;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-    transition: box-shadow 0.2s;
-}
-.video video:hover,
-.video iframe:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-}
-.video-solo {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    justify-items: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-}
-.video-solo video {
-    max-width: 100%;
-    max-height: 400px;
-    border-radius: 8px;
-    display: block;
-    margin: auto;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-    transition: box-shadow 0.2s;
-}
-
-
-/* Enlaces */
-a {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.2s;
-}
-a:hover {
-    color: #f76825;
-}
-
-/* Footer moderno */
-footer {
-    background: linear-gradient(90deg, #f1ddca 60%, #f76825 100%);
-    color: #222;
-    text-align: center;
-    padding: 18px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    font-size: 15px;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.07);
-    transition: background 0.3s, box-shadow 0.3s;
-}
-footer p {
-    font-size: 14px;
-}
-
-/* contacto */
-
-#contact {
-    background-color: #faf9f6; /* tono muy suave y claro */
-    border: 1.5px solid #f1ddca; /* borde delicado */
-    border-radius: 16px;
-    padding: 30px 25px;
-    max-width: 600px;
-    margin: 40px auto 60px auto; /* centrado con margen arriba y abajo */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    color: #444;
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    transition: box-shadow 0.3s ease;
-}
-
-#contact:hover {
-    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
-}
-
-#contact h2 {
-    font-family: 'Times New Roman', serif;
-    font-size: 36px;
-    color: #000000;
-    margin-bottom: 20px;
-    -webkit-text-stroke: 0.6px #000;
-}
-
-#contact p {
-    font-size: 18px;
-    margin: 12px 0;
-    font-weight: 500;
-    letter-spacing: 0.4px;
-}
-
-
-/* Main y sección */
-main {
-    margin-top: 150px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    text-align: center;
-    background: transparent;
-}
-section {
-    margin: 0 0 40px 0;
-    padding: 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .video {
-        grid-template-columns: 1fr;
-    }
-    .caja-grande {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-    .caja-grande img {
-        max-width: 100%;
-        height: auto;
-    }
-    figure {
-        width: 100%;
-        margin: 10px 0;
-    }
     header img {
         max-width: 120px;
     }
@@ -413,19 +147,319 @@ section {
         display: block;
         margin: 5px 0;
     }
+}
+
+
+
+/* Estilos para las secciones */
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+.cabezal {
+    margin-top: 100px;
+    margin-left: 0;
+    width: 1300px; /* Ajusta el ancho máximo de las imágenes */
+    max-height: 100%; /* Ajusta la altura máxima de las imágenes */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 900px) {
+    .cabezal {
+        margin-top: 80px;  /* Menor espacio en tablets */
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 600px) {
+    .cabezal {
+        margin-top: 60px;  /* Menor espacio en celulares */
+        width: 100%;
+        max-width: 100%;
+        padding: 0 5px;
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+}
+
+#inicio {
+    background-color: #ecf0f1;
+    text-align: center;
+    margin-top: 150px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #f76825;
+    -webkit-text-stroke: 0.9px #000; /* Contorno negro */
+}
+span {
+    margin-top: 150px;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #f76825;
+    -webkit-text-stroke: 0.9px #000; /* Contorno negro */
+}
+.bienvenida {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+#galeria, #exposiciones, #contacto, #blog {
+    background-color: #fff;
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+}
+
+#galeria h2, #exposiciones h2, #contacto h2, #blog h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para las imágenes en la galería */
+#galeria article {
+    text-align: center; /* Centra las imágenes dentro del artículo */
+}
+
+article h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+article p {
+    margin-bottom: 10px;
+}
+
+figure {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+figure img {
+    width: 500px;
+    height: 320px; /* Ajusta este valor según prefieras */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+article {
+    margin-top: 20px;  /* Ajusta este valor */
+    margin-bottom: 20px; /* Ajusta este valor */
+}
+
+#exposiciones {
+    line-height: 1.0;
+}
+#exposiciones h2 {
+    line-height: 2.0;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #f76825;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #f1ddca; /* Igual que el header */
+    background: linear-gradient(90deg, #f1ddca 60%, #f76825 100%);
+    color: #222;
+    text-align: center;
+    padding: 18px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 15px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.07);
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Estilos para el contacto */
+#contacto p {
+    font-size: 16px;
+}
+
+#contacto a {
+    font-weight: bold;
+}
+
+/* Media query para hacer la página responsive */
+@media (max-width: 768px) {
+
+    figure {
+        width: 100%;
+        margin: 10px 0;
+    }
+
     footer {
         position: relative;
         margin-top: 20px;
     }
 }
-@media (max-width: 600px) {
-    header img {
-        max-width: 90px;
+.caja {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
+    gap: 20px; /* Espaciado entre las imágenes */
+    justify-items: center; /* Centra las imágenes horizontalmente dentro de cada celda */
+    align-items: center; /* Centra las imágenes verticalmente dentro de cada celda */
+    justify-content: center; /* Centra todo el contenido de la cuadrícula */
+}
+
+.caja img {
+    max-width: 400px;
+    max-height: 400px; /* Mantiene la proporción de las imágenes */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+    align-content: center; /* Centra la imagen dentro de su celda */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+}
+.video {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
+    gap: 20px; /* Espaciado entre los videos */
+    justify-items: center; /* Centra los videos horizontalmente */
+    align-items: center; /* Centra los videos verticalmente */
+    margin-top: 30px; /* Espacio superior para separar del contenido anterior */
+}
+
+.video video {
+    max-width: 100%; /* Asegura que los videos no excedan el tamaño del contenedor */
+    max-height: 400px; /* Limita la altura máxima del video */
+    border-radius: 8px; /* Bordes redondeados, igual que las imágenes */
+    display: block; /* Asegura que se comporte como un bloque */
+    margin: auto; /* Centra el video dentro de su celda */
+}
+.video {
+    width: 100%; /* O un ancho específico, como 80% o 1200px */
+    margin: 0 auto; /* Centra el contenedor si tiene un ancho fijo */
+}
+@media (max-width: 768px) {
+    .video {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
     }
+}
+.video {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente fila */
+    gap: 20px; /* Espaciado entre los videos */
+    justify-content: center; /* Centra los videos horizontalmente */
+}
+
+.video video {
+    flex: 0 0 calc(50% - 20px); /* Cada video ocupa el 50% menos el espacio del gap */
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 8px;
+    margin: auto;
+}
+.caja-grande {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
+    gap: 20px; /* Espaciado entre las imágenes */
+    justify-items: center; /* Centra las imágenes horizontalmente dentro de cada celda */
+    align-items: center; /* Centra las imágenes verticalmente dentro de cada celda */
+}
+
+.caja-grande img {
+    max-width: 500px;
+    max-height: 500px; /* Mantiene la proporción de las imágenes */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+}
+@media (max-width: 768px) {
+    .caja-grande {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        gap: 10px; /* Reduce el espacio entre las imágenes */
+    }
+
+    .caja-grande img {
+        max-width: 100%; /* Asegura que las imágenes ocupen todo el ancho disponible */
+        height: auto; /* Mantiene la proporción de las imágenes */
+    }
+}
+
+
+
+.titulazo, h2 {
+    margin: 20px 0;
+    padding: 20px;
+    font-size: 2.2em;
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #f76825; /* Color del texto del titulazo */
+    text-align: center;
+    margin-bottom: 30px;
+}
+main {
+    padding: 20px;
+    margin-top: 100px;
+    background-color: #fff; /* Fondo blanco para el contenido principal */
+}
+section {
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width: 640px) {
     main {
-        margin-top: 90px;
-        padding: 2px;
+        margin-top: 200px;
     }
+}
+
+#contacto {
+    margin-bottom: 60px;
+}
+
+#blog {
+    margin-bottom: 60px;
+}
+
+#blog p {
+    font-size: 16px;
+}
+
+#blog a {
+    font-weight: bold;
+}
+
+section, #galeria, #exposiciones, #contacto, #blog {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    margin: 30px 0;
+    padding: 30px 20px;
+}
+
+figure img, .caja-grande img, .caja img {
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+figure img:hover, .caja-grande img:hover, .caja img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
 }
 /* ================== VISTA CELULAR ================== */
 @media screen and (max-width: 480px) {
@@ -465,7 +499,7 @@ section {
     }
 
     /* Secciones */
-    section, #galeria, #exposiciones, #contacto {
+    section, #galeria, #exposiciones, #contacto, #blog {
         margin: 20px 0;
         padding: 20px 15px;
     }
