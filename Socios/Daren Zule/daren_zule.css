@@ -379,6 +379,25 @@ footer p {
     border-radius: 8px;
     margin: auto;
 }
+
+.video-solo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.video-solo iframe,
+.video-solo video {
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    max-width: 100%;
+}
+
 .caja-grande {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
@@ -548,6 +567,18 @@ figure img:hover, .caja-grande img:hover, .caja img:hover {
         position: relative;
     }
 }
+
+.page-description {
+    font-size: 1.15em;
+    color: #444;
+    text-align: center;
+    margin: 18px 0 28px 0;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
 /* ================== OPCIÓN 2: Header con botones reducidos al lado del logo ================== */
 /* Botones al lado del logo, pero permiten varias filas */
 @media (max-width: 768px) {
