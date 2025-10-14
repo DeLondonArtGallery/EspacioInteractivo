@@ -423,7 +423,56 @@ footer p {
     }
 }
 
+.nombresdesocios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    justify-items: center;
+    align-items: start;
+    margin: 40px 0;
+}
 
+.nombresdesocios figure {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 18px 12px;
+    text-align: center;
+    transition: box-shadow 0.2s;
+}
+
+.nombresdesocios figure:hover {
+    box-shadow: 0 8px 32px rgba(247,104,37,0.18);
+}
+
+.nombresdesocios img {
+    max-width: 350px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.nombresdesocios h3 {
+    font-size: 1.1em;
+    color: #f76825;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .nombresdesocios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .nombresdesocios {
+        grid-template-columns: 1fr;
+    }
+    .nombresdesocios img {
+        max-width: 100%;
+    }
+}
 
 .titulazo, h2 {
     margin: 20px 0;
