@@ -80,7 +80,7 @@ searchInput.addEventListener('input', function() {
             const a = document.createElement('a');
             a.href = item.url;
             a.textContent = item.name;
-            a.style.color = '#f76825';
+            a.style.color = '#65cff0ff';
             a.style.fontWeight = 'bold';
             a.style.textDecoration = 'none';
             a.style.fontSize = '1.1em';
