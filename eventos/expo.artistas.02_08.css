@@ -423,7 +423,30 @@ footer p {
     }
 }
 
+.caja-triple {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 columnas de igual tamaño */
+    gap: 20px; /* Espaciado entre las imágenes */
+    justify-items: center; /* Centra las imágenes horizontalmente dentro de cada celda */
+    align-items: center; /* Centra las imágenes verticalmente dentro de cada celda */
+}
 
+.caja-triple img {
+    max-width: 500px;
+    max-height: 500px; /* Mantiene la proporción de las imágenes */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+}
+@media (max-width: 768px) {
+    .caja-triple {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        gap: 10px; /* Reduce el espacio entre las imágenes */
+    }
+
+    .caja-triple img {
+        max-width: 100%; /* Asegura que las imágenes ocupen todo el ancho disponible */
+        height: auto; /* Mantiene la proporción de las imágenes */
+    }
+}
 
 .titulazo, h2 {
     margin: 20px 0;
