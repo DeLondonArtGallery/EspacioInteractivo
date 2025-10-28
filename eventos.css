@@ -589,6 +589,17 @@ figure img:hover, .caja-grande img:hover, .caja img:hover {
     letter-spacing: 0.5px;
 }
 
+.page-description-negrita {
+    font-size: 1.15em;
+    color: #000000;
+    text-align: center;
+    margin: 18px 0 28px 0;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
 /* search bar */
 
 .search-bar {
