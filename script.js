@@ -1,16 +1,16 @@
 const hamburger = document.getElementById('hamburger');
 const menu = document.getElementById('menu');
-
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    menu.classList.toggle('active');
-    // Cambia el ícono
-    if (hamburger.classList.contains('active')) {
-        hamburger.innerHTML = '&times;'; // Cruz
-    } else {
-        hamburger.innerHTML = '&#9776;'; // Hamburguesa
-    }
-});
+if (hamburger && menu) {
+    hamburger.addEventListener('click', function() {
+        menu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+        if (hamburger.classList.contains('active')) {
+            hamburger.innerHTML = '&times;';
+        } else {
+            hamburger.innerHTML = '&#9776;';
+        }
+    });
+}
 
 console.log('Archivo JavaScript enlazado correctamente');
 
@@ -42,7 +42,8 @@ const searchData = [
     { name: "Teto Lagos", url: "Socios/Teto Lagos/teto_lagos.html", keywords: ["teto", "lagos", "teto lagos"] },
     { name: "Valentina Mohr", url: "Socios/Valentina Mohr/valentina_mohr.html", keywords: ["valentina", "mohr", "valentina mohr"] },
     { name: "Washington Gallo", url: "Socios/Washington Gallo/washington_gallo.html", keywords: ["washington", "gallo", "washington gallo"] },
-    // Agrega más socios aquí siguiendo el mismo formato
+    // Secciones principales
+    { name: "Socios", url: "socios.html", keywords: ["socios", "artistas", "integrantes", "miembros"] },
     { name: "Talleres", url: "talleres.html", keywords: ["talleres", "clases", "aprendizaje"] },
     { name: "Eventos", url: "eventos.html", keywords: ["eventos", "agenda", "actividades", "milonga"] },
     { name: "Tienda", url: "tienda.html", keywords: ["tienda", "comprar", "shop", "venta"] },
@@ -57,56 +58,58 @@ const searchInput = document.querySelector('.search-bar input[type="text"]');
 const searchResults = document.getElementById('search-results');
 const searchForm = document.querySelector('.search-bar');
 
-// Mostrar sugerencias al escribir
-searchInput.addEventListener('input', function() {
-    const query = this.value.trim().toLowerCase();
-    searchResults.innerHTML = '';
-    if (query.length === 0) return;
+if (searchInput && searchResults && searchForm) {
+    // Mostrar sugerencias al escribir
+    searchInput.addEventListener('input', function() {
+        const query = this.value.trim().toLowerCase();
+        searchResults.innerHTML = '';
+        if (query.length === 0) return;
 
-    // Buscar coincidencias
-    const matches = searchData.filter(item =>
-        item.name.toLowerCase().includes(query) ||
-        item.keywords.some(k => k.includes(query))
-    );
+        // Buscar coincidencias
+        const matches = searchData.filter(item =>
+            item.name.toLowerCase().includes(query) ||
+            item.keywords.some(k => k.includes(query))
+        );
 
-    if (matches.length > 0) {
-        const ul = document.createElement('ul');
-        ul.style.listStyle = 'none';
-        ul.style.padding = '0';
-        ul.style.margin = '10px 0';
-        matches.forEach(item => {
-            const li = document.createElement('li');
-            li.style.marginBottom = '8px';
-            const a = document.createElement('a');
-            a.href = item.url;
-            a.textContent = item.name;
-            a.style.color = '#65cff0ff';
-            a.style.fontWeight = 'bold';
-            a.style.textDecoration = 'none';
-            a.style.fontSize = '1.1em';
-            a.onmouseover = () => a.style.textDecoration = 'underline';
-            a.onmouseout = () => a.style.textDecoration = 'none';
-            li.appendChild(a);
-            ul.appendChild(li);
-        });
-        searchResults.appendChild(ul);
-    } else {
-        searchResults.innerHTML = '<p style="color:#888;">No se encontraron coincidencias.</p>';
-    }
-});
+        if (matches.length > 0) {
+            const ul = document.createElement('ul');
+            ul.style.listStyle = 'none';
+            ul.style.padding = '0';
+            ul.style.margin = '10px 0';
+            matches.forEach(item => {
+                const li = document.createElement('li');
+                li.style.marginBottom = '8px';
+                const a = document.createElement('a');
+                a.href = item.url;
+                a.textContent = item.name;
+                // No sobrescribas el color aquí, usa el CSS
+                a.style.fontWeight = 'bold';
+                a.style.textDecoration = 'none';
+                a.style.fontSize = '1.1em';
+                a.onmouseover = () => a.style.textDecoration = 'underline';
+                a.onmouseout = () => a.style.textDecoration = 'none';
+                li.appendChild(a);
+                ul.appendChild(li);
+            });
+            searchResults.appendChild(ul);
+        } else {
+            searchResults.innerHTML = '<p style="color:#888;">No se encontraron coincidencias.</p>';
+        }
+    });
 
-// Ir a la primera coincidencia al enviar el formulario
-searchForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const query = searchInput.value.trim().toLowerCase();
-    if (query.length === 0) return;
-    const match = searchData.find(item =>
-        item.name.toLowerCase().includes(query) ||
-        item.keywords.some(k => k.includes(query))
-    );
-    if (match) {
-        window.location.href = match.url;
-    } else {
-        searchResults.innerHTML = '<p style="color:#888;">No se encontraron coincidencias.</p>';
-    }
-});
+    // Ir a la primera coincidencia al enviar el formulario
+    searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = searchInput.value.trim().toLowerCase();
+        if (query.length === 0) return;
+        const match = searchData.find(item =>
+            item.name.toLowerCase().includes(query) ||
+            item.keywords.some(k => k.includes(query))
+        );
+        if (match) {
+            window.location.href = match.url;
+        } else {
+            searchResults.innerHTML = '<p style="color:#888;">No se encontraron coincidencias.</p>';
+        }
+    });
+}
