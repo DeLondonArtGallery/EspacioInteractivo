@@ -63,14 +63,14 @@ header nav a:hover {
 
 /* Botón hamburguesa */
 .hamburger {
-    font-size: 24px;
-    cursor: pointer;
-    border: none;
+    display: none;
+    font-size: 28px;
     background: none;
-    color: #1a237e !important; /* Azul oscuro normalmente */
-    transition: color 0.2s;
-    z-index: 15;
-    position: relative;
+    border: none;
+    color: #1a237e;
+    cursor: pointer;
+    margin-left: 16px;
+    z-index: 1001;
 }
 
 .hamburger:hover,
@@ -82,25 +82,94 @@ header nav a:hover {
     color: #f76825 !important; /* Naranja cuando es cruz */
 }
 
+/* gestión del botón hamburguesa en dispositivos móviles */
+.main-nav {
+    display: flex;
+    gap: 18px;
+}
+
+.hamburger, .menu {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4px 8px;
+        min-height: 56px;
+    }
+    header img {
+        max-width: 90px;
+    }
+    .main-nav {
+        display: none;
+    }
+    .header-btn {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        font-size: 26px;
+        background: none;
+        border: none;
+        color: #1a237e;
+        cursor: pointer;
+        position: relative;
+        z-index: 2000;
+        top: 50%;
+        margin-right: 30px;
+    }
+    .menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    .menu.active {
+        display: flex;
+    }
+    .menu li {
+        margin: 18px 0;
+    }
+    .menu a {
+        color: #fff;
+        font-size: 1.3em;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .menu a:hover {
+        color: #f76825;
+    }
+}
+
 /* Botón destacado */
 .header-btn {
-    display: inline-block;
+    padding: 4px 14px;
+    font-size: 1em;
+    border-radius: 20px;
+    margin: 2px 4px;
+    text-align: center;
     background: #f76825;
     color: #fff;
-    padding:10px 22px;
-    border-radius: 20px;
-    margin: 5px 8px;
     font-weight: bold;
-    text-decoration: none;
     border: none;
-    transition: background 0.2s, color 0.2s, transform 0.2s;
     box-shadow: 0 2px 8px rgba(247,104,37,0.08);
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
 }
 
 .header-btn:hover {
     background: #f39315;
     color: #fff;
-    border-color: #f76825;
     transform: translateY(-2px) scale(1.05);
 }
 
