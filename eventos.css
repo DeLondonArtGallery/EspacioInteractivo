@@ -150,6 +150,16 @@ header nav a:hover {
 }
 
 
+#sec.tit .titulazo, .titulazo,
+#sec.tit h2, #sec-tit section {
+    margin-top: -60px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+.coso {
+    margin-top: -70px !important;
+}
 
 /* Estilos para las secciones */
 section {
