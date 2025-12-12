@@ -40,6 +40,7 @@ const searchData = [
     { name: "Rocío Cuervo", url: "Socios/Rocío Cuervo/rocio_cuervo.html", keywords: ["rocío", "cuervo", "rocio cuervo"] },
     { name: "Sarita Galván", url: "Socios/Sarita Galván/sarita_galvan.html", keywords: ["sarita", "galván", "sarita galvan"] },
     { name: "Teto Lagos", url: "Socios/Teto Lagos/teto_lagos.html", keywords: ["teto", "lagos", "teto lagos"] },
+    { name: "Tusuyllacta", url: "Socios/Tusuyllacta/tusuyllacta.html", keywords: ["tusuyllacta", "grupo cultural", "danzas peruanas", "tusuyllacta uruguay"] },
     { name: "Valentina Mohr", url: "Socios/Valentina Mohr/valentina_mohr.html", keywords: ["valentina", "mohr", "valentina mohr"] },
     { name: "Washington Gallo", url: "Socios/Washington Gallo/washington_gallo.html", keywords: ["washington", "gallo", "washington gallo"] },
     // Secciones principales
