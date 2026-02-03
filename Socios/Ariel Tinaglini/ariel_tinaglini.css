@@ -753,6 +753,10 @@ figure img:hover, .caja-grande img:hover, .caja img:hover {
         flex: 1; /* ocupa todo el ancho que pueda */
     }
 
+    main {
+        margin-top: 0; /* había mucho espacio en la vista mobile */
+    }
+
     .header-btn {
         font-size: 13px;
         padding: 6px 12px;
@@ -798,5 +802,9 @@ figure img:hover, .caja-grande img:hover, .caja img:hover {
     .hamburger {
         right: 10px;   /* más cerca del borde */
         font-size: 24px;
+    }
+
+    main {
+        margin-top: 0; /* había mucho espacio en la vista mobile */
     }
 }
