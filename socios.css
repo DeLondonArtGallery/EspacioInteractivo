@@ -807,6 +807,10 @@ figure img:hover, .caja-grande img:hover, .caja img:hover {
         margin: 4px 2px;
         flex-shrink: 0; /* que no se achiquen más de la cuenta */
     }
+
+    main {
+        margin-top: 0; /* había mucho espacio en la vista mobile */
+    }
 }
 
 /* Extra ajuste para pantallas muy chicas (celulares <480px) */
@@ -846,5 +850,9 @@ figure img:hover, .caja-grande img:hover, .caja img:hover {
     .hamburger {
         right: 10px;   /* más cerca del borde */
         font-size: 24px;
+    }
+
+    main {
+        margin-top: 0; /* había mucho espacio en la vista mobile */
     }
 }
