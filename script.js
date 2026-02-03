@@ -35,7 +35,7 @@ const searchData = [
     { name: "Miguel Ángel Pérez", url: "Socios/Miguel Ángel Pérez/miguel_angel_perez.html", keywords: ["miguel", "ángel", "perez", "miguel ángel pérez"] },
     { name: "Miriam Sosa", url: "Socios/Miriam Sosa/miriam_sosa.html", keywords: ["miriam", "sosa", "miriam sosa"] },
     { name: "Mónica Burgueño", url: "Socios/Mónica Burgueño/monica_burgueno.html", keywords: ["mónica", "burgueño", "monica burgueno"] },
-    { name: "Olga Rigenko", url: "Socios/Olga Rigenko/olga_rigenko.html", keywords: ["olga", "rigenko", "olga rigenko"] },
+    { name: "Olga Risgenko", url: "Socios/Olga Risgenko/olga_risgenko.html", keywords: ["olga", "risgenko", "olga risgenko"] },
     { name: "Omar Oxley", url: "Socios/Omar Oxley/omar_oxley.html", keywords: ["omar", "oxley", "omar oxley"] },
     { name: "Rocío Cuervo", url: "Socios/Rocío Cuervo/rocio_cuervo.html", keywords: ["rocío", "cuervo", "rocio cuervo"] },
     { name: "Sarita Galván", url: "Socios/Sarita Galván/sarita_galvan.html", keywords: ["sarita", "galván", "sarita galvan"] },
@@ -113,4 +113,5 @@ if (searchInput && searchResults && searchForm) {
             searchResults.innerHTML = '<p style="color:#888;">No se encontraron coincidencias.</p>';
         }
     });
+
 }
