@@ -473,6 +473,7 @@ footer p {
     gap: 20px; /* Espaciado entre las imágenes */
     justify-items: center; /* Centra las imágenes horizontalmente dentro de cada celda */
     align-items: center; /* Centra las imágenes verticalmente dentro de cada celda */
+    margin-top: 0;
 }
 
 .caja-grande img {
@@ -497,14 +498,21 @@ footer p {
 .titulazo, h2 {
     margin: 20px 0;
     padding: 20px;
+    margin-top: -60px;
+    padding-top: 0;
     font-size: 2.2em;
     font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     font-weight: 700;
     letter-spacing: 1px;
     color: #f76825; /* Color del texto del titulazo */
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: -50px;
 }
+
+#tit {
+    margin-bottom: -20px;
+}
+
 main {
     padding: 20px;
     margin-top: 100px;
