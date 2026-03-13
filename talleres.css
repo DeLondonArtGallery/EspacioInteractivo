@@ -481,6 +481,14 @@ footer p {
     max-height: 500px; /* Mantiene la proporción de las imágenes */
     border-radius: 8px; /* Opcional: bordes redondeados */
 }
+
+.caja-grande a h3 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: -10px;
+    font-weight: bold;
+}
+
 @media (max-width: 768px) {
     .caja-grande {
         grid-template-columns: 1fr; /* Cambia a una sola columna */
