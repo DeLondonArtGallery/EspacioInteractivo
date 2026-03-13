@@ -356,6 +356,25 @@ a:hover {
     color: #f76825;
 }
 
+#expo-sala-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #f76825;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(247, 104, 37, 0.3);
+}
+
+#expo-sala-link:hover {
+    background-color: #f39315;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(247, 104, 37, 0.4);
+}
+
 /* Estilos para el footer */
 footer {
     background-color: #f1ddca; /* Igual que el header */
