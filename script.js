@@ -43,6 +43,23 @@ const searchData = [
     { name: "Tusuyllacta", url: "Socios/Tusuyllacta/tusuyllacta.html", keywords: ["tusuyllacta", "grupo cultural", "danzas peruanas", "tusuyllacta uruguay"] },
     { name: "Valentina Mohr", url: "Socios/Valentina Mohr/valentina_mohr.html", keywords: ["valentina", "mohr", "valentina mohr"] },
     { name: "Washington Gallo", url: "Socios/Washington Gallo/washington_gallo.html", keywords: ["washington", "gallo", "washington gallo"] },
+    { name: "Ana Rapanello", url: "Socios/Ana Rapanello/ana_rapanello.html", keywords: ["ana", "rapanello", "ana rapanello"] },
+    { name: "Angel Banega", url: "Socios/Angel Banega/angel_banega.html", keywords: ["angel", "banega", "angel banega"] },
+    { name: "Emys Saravia", url: "Socios/Emys Saravia/emys_saravia.html", keywords: ["emys", "saravia", "emys saravia"] },
+    { name: "Estela Silva", url: "Socios/Estela Silva/estela_silva.html", keywords: ["estela", "silva", "estela silva"] },
+    { name: "Florencia Lima", url: "Socios/Florencia Lima/florencia_lima.html", keywords: ["florencia", "lima", "florencia lima"] },
+    { name: "Gabriel Bofi", url: "Socios/Gabriel Bofi/gabriel_bofi.html", keywords: ["gabriel", "bofi", "gabriel bofi"] },
+    { name: "Mirta Perez", url: "Socios/Mirta Perez/mirta_perez.html", keywords: ["mirta", "perez", "mirta perez"] },
+    { name: "Paolo Nievas", url: "Socios/Paolo Nievas/paolo_nievas.html", keywords: ["paolo", "nievas", "paolo nievas"] },
+    { name: "Patricia Olivera", url: "Socios/Patricia Olivera/patricia_olivera.html", keywords: ["patricia", "olivera", "patricia olivera"] },
+    { name: "Soledad Silva", url: "Socios/Soledad Silva/soledad_silva.html", keywords: ["soledad", "silva", "soledad silva"] },
+    { name: "Thiare Arguello", url: "Socios/Thiare Arguello/thiare_arguello.html", keywords: ["thiare", "arguello", "thiare arguello"] },
+    { name: "Taller Tsadee", url: "Socios/Taller Tsadee/taller_tsadee.html", keywords: ["taller", "tsadee", "taller tsadee"] },
+    { name: "Homenaje a Sergio Clavijo", url: "Socios/Homenaje a Sergio Clavijo/sergio_clavijo.html", keywords: ["homenaje", "sergio", "clavijo", "homenaje sergio clavijo"] },
+    { name: "Henry Hernández", url: "Socios/Henry Hernández/henry_hernandez.html", keywords: ["henry", "hernández", "henry hernández"] },
+    { name: "Marcelo Eduardo Pinto Ortega", url: "Socios/Marcelo Eduardo Pinto Ortega/marcelo_pinto.html", keywords: ["marcelo", "eduardo", "pinto", "ortega", "marcelo pinto"] },
+    { name: "Monica Burgueño", url: "Socios/Monica Burgueño/monica_burgueño.html", keywords: ["monica", "burgueño", "monica burgueño"] },
+    
     // Secciones principales
     { name: "Socios", url: "socios.html", keywords: ["socios", "artistas", "integrantes", "miembros"] },
     { name: "Talleres", url: "talleres.html", keywords: ["talleres", "clases", "aprendizaje"] },
@@ -51,7 +68,47 @@ const searchData = [
     { name: "Membresía", url: "membresia.html", keywords: ["membresía", "membresias", "suscripción"] },
     { name: "Blog", url: "https://delondonartgalleryprincipal.blogspot.com/", keywords: ["blog", "noticias", "artículos"] },
     { name: "Exposiciones", url: "https://delondonartgallerycartelera.blogspot.com/", keywords: ["exposiciones", "muestra", "cartelera"] },
-    { name: "Contacto", url: "mailto:aespaciointeractivo@gmail.com", keywords: ["contacto", "mail", "correo", "email"] }
+    { name: "Contacto", url: "mailto:aespaciointeractivo@gmail.com", keywords: ["contacto", "mail", "correo", "email"] },
+    // Eventos específicos
+    { name: "Evento ADA", url: "eventos/ada.html", keywords: ["ada", "evento ada"] },
+    { name: "BTS 14-03-2026", url: "eventos/bts_14_03_2026.html", keywords: ["bts", "14-03-2026", "evento bts"] },
+    { name: "Diálibro", url: "eventos/dialibro.html", keywords: ["dialibro", "evento dialibro"] },
+    { name: "Doglia", url: "eventos/doglia.html", keywords: ["doglia", "evento doglia"] },
+    { name: "Exposición Artistas", url: "eventos/expo.artistas.html", keywords: ["exposición artistas", "expo artistas"] },
+    { name: "Exposición Artistas 02-08", url: "eventos/expo.artistas.02_08.html", keywords: ["exposición artistas 02-08", "expo 02-08"] },
+    { name: "Museos en la Noche 2025", url: "eventos/museos_2025.html", keywords: ["museos 2025", "noche museos", "evento museos"] },
+    { name: "Piriápolis 02-26", url: "eventos/piria_02_26.html", keywords: ["piriápolis", "02-26", "evento piriápolis"] },
+    { name: "Pre Día de los Enamorados", url: "eventos/pre_dia_enamorados.html", keywords: ["pre día enamorados", "enamorados", "evento enamorados"] },
+    { name: "The Bardo", url: "eventos/the_bardo.html", keywords: ["the bardo", "evento bardo"] },
+    // Subpáginas de Talleres
+    { name: "Talleres de Idiomas", url: "Talleres/Idiomas/idioma.html", keywords: ["idiomas", "talleres idiomas", "clases idiomas"] },
+    { name: "Taller de Portugués", url: "Talleres/Idiomas/Portugués/portugues.html", keywords: ["portugués", "taller portugués", "idioma portugués"] },
+    { name: "Formación en Práctica Artística", url: "Talleres/Formación en práctica artística/formacion_pa.html", keywords: ["formación", "práctica artística", "formacion pa"] },
+    { name: "Taller de Dibujo", url: "Talleres/Dibujo/dibujo.html", keywords: ["dibujo", "taller dibujo", "clases dibujo"] },
+    { name: "Dibujo de Figura Humana", url: "Talleres/Dibujo/Figura Humana/figura.html", keywords: ["figura humana", "dibujo figura", "taller figura"] },
+    { name: "Corte y Confección", url: "Talleres/Corte y confección/corte_y_confeccion.html", keywords: ["corte", "confección", "corte confeccion"] },
+    { name: "Taller de Canto", url: "Talleres/Canto/canto.html", keywords: ["canto", "taller canto", "clases canto"] },
+    { name: "Taller de Batería", url: "Talleres/Batería/bateria.html", keywords: ["batería", "taller batería", "percusión"] },
+    { name: "Batería con Eduardo Peloche", url: "Talleres/Batería/Eduardo Peloche bata/edu_pelo_bata.html", keywords: ["eduardo peloche", "batería eduardo", "bateria peloche"] },
+    { name: "Batería De-Cadencia", url: "Talleres/Batería/De-Cadencia/de_cadencia.html", keywords: ["de-cadencia", "batería de-cadencia", "percusión de-cadencia"] },
+    // Subcategorías de Tienda
+    { name: "Amigurumis", url: "Tienda/Amigurumis/amigorumis.html", keywords: ["amigurumis", "tejidos", "artesanías"] },
+    { name: "Aperitivos", url: "Tienda/Aperitivos/aperitivos.html", keywords: ["aperitivos", "comida", "productos"] },
+    { name: "Arte con Luces", url: "Tienda/Arte con Luces/arte_con_luces.html", keywords: ["arte luces", "iluminación", "arte"] },
+    { name: "Arte en Botellas", url: "Tienda/Arte en Botellas/arte_con_botellas.html", keywords: ["arte botellas", "botellas", "reciclaje"] },
+    { name: "Collage", url: "Tienda/Collage/collage.html", keywords: ["collage", "arte collage"] },
+    { name: "Cuadernos Artesanales", url: "Tienda/Cuadernos artesanales/cuadernos_artesanales.html", keywords: ["cuadernos", "artesanales", "libros"] },
+    { name: "Cuadros", url: "Tienda/Cuadros/cuadros.html", keywords: ["cuadros", "pinturas", "arte"] },
+    { name: "Deco-Hogar", url: "Tienda/Deco-Hogar/deco_hogar.html", keywords: ["deco hogar", "decoración", "hogar"] },
+    { name: "Dibujos", url: "Tienda/Dibujos/dibujos.html", keywords: ["dibujos", "ilustraciones"] },
+    { name: "Discos", url: "Tienda/Discos/discos.html", keywords: ["discos", "música", "vinilos"] },
+    { name: "Esculturas", url: "Tienda/Esculturas/esculturas.html", keywords: ["esculturas", "arte 3d"] },
+    { name: "Impresiones Digitales", url: "Tienda/Impresiones digitales/impresiones_digitales.html", keywords: ["impresiones", "digitales", "prints"] },
+    { name: "Libros", url: "Tienda/Libros/libros.html", keywords: ["libros", "lectura"] },
+    { name: "Prendas y Accesorios", url: "Tienda/Prendas y accesorios/prendas_accesorios.html", keywords: ["prendas", "accesorios", "ropa"] },
+    { name: "Tapices", url: "Tienda/Tapices/tapices.html", keywords: ["tapices", "textiles"] },
+    // Otras páginas
+    { name: "Inicio", url: "index.html", keywords: ["inicio", "home", "principal"] }
 ];
 
 // Elementos
@@ -113,5 +170,4 @@ if (searchInput && searchResults && searchForm) {
             searchResults.innerHTML = '<p style="color:#888;">No se encontraron coincidencias.</p>';
         }
     });
-
 }
